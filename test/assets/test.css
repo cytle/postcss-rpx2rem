@@ -1,0 +1,15 @@
+body {
+    background: #eee;
+    color: #888; /* color is gray */
+    border: 1rpx solid;
+    height: 20rpx; /* rpx */
+    padding: 15rpx; /*rpx*/
+    -webkit-animation: anim1 linear infinite;
+}
+
+.foo {
+    border: 1rpx solid;
+    height: 20px;
+    padding: 75rpx;
+    font-size: 1.2em;
+}
