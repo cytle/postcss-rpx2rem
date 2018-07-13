@@ -1,0 +1,40 @@
+{
+  "name": "postcss-rpx2rem",
+  "version": "0.0.0",
+  "description": "PostCSS plugin rpx2rem",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "rpx",
+    "weapp",
+    "ma"
+  ],
+  "author": "炒饭 <chaofan@2dfire.com>",
+  "license": "MIT",
+  "repository": "cytle/postcss-rpx2rem",
+  "bugs": {
+    "url": "https://github.com/cytle/postcss-rpx2rem/issues"
+  },
+  "homepage": "https://github.com/cytle/postcss-rpx2rem",
+  "dependencies": {
+    "postcss": "^6.0.16"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-postcss": "^2.0.2",
+    "jest": "^22.4.2"
+  },
+  "scripts": {
+    "test": "jest && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "env": {
+      "jest": true
+    }
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
