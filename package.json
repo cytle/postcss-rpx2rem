@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/cytle/postcss-rpx2rem",
   "dependencies": {
+    "object-assign": "^4.1.1",
     "postcss": "^6.0.16"
   },
   "devDependencies": {
