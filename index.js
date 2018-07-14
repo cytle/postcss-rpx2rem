@@ -13,7 +13,8 @@ const defaults = {
 function toFixed(number, precision) {
     const multiplier = Math.pow(10, precision + 1);
     const wholeNumber = Math.floor(number * multiplier);
-    return (Math.round(wholeNumber / 10) * 10) / multiplier;
+    const fixedWholeNumber = Math.round(wholeNumber / 10) * 10;
+    return  fixedWholeNumber / multiplier;
 }
 
 function declarationExists(decls, prop, value) {
