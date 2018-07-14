@@ -37,10 +37,13 @@ module.exports = postcss.plugin('postcss-rpx2rem', (options) => {
         const value = toFixed(parseFloat($1) * proportion, unitPrecision);
         return value === 0 ? '0' : `${value}${outputUnit}`;
     };
-    const replaceRegex = new RegExp(`(\\d*\\.?\\d+)${targetUnit}`);
 
-    return function rpx2rem(root, result) {
-        root.walkRules((rule) => {
+    const replaceRegex = new RegExp(
+        `"[^"]+"|'[^']+'|url\\([^)]+\\)|(\\d*\\.?\\d+)${targetUnit}`,
+        'g');
+
+    return function rpx2rem(root) {
+        root.walkRules((rule, result) => {
             rule.walkDecls((decl) => {
                 if (decl.value.indexOf(targetUnit) === -1) return;
                 const value = decl.value.replace(replaceRegex, replaceFn);
@@ -57,7 +60,7 @@ module.exports = postcss.plugin('postcss-rpx2rem', (options) => {
 
         if (mediaQuery) {
             root.walkAtRules('media', (rule) => {
-                if (rule.value.indexOf(targetUnit) === -1) return;
+                if (rule.params.indexOf(targetUnit) === -1) return;
                 rule.params = rule.params.replace(replaceRegex, replaceFn);
             });
         }

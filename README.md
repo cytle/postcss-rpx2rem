@@ -9,20 +9,18 @@
 ```css
 /* target */
 .foo {
-    border: 1rpx solid;
     height: 20px;
-    padding: 75rpx;
-    font-size: 1.2em;
+    padding: 75rpx 1rem 0 20rpx;
+    content: "20rpx";
 }
 ```
 
 ```css
 /* output */
 .foo {
-    border: 0.01333rem solid;
     height: 20px;
-    padding: 1rem;
-    font-size: 1.2em;
+    padding: 1rem 1rem 0 0.26667rem;
+    content: "20rpx";
 }
 ```
 
