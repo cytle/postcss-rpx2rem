@@ -29,6 +29,7 @@
   "scripts": {
     "test": "jest && eslint *.js"
   },
+  "engines": { "node" : ">=6.4.0" },
   "eslintConfig": {
     "extends": "eslint-config-postcss/es5",
     "rules": {
